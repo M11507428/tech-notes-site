@@ -1,7 +1,7 @@
 # 生活科技小百科
 
-整理一些平常會碰到的科技問題，像 Wi-Fi、USB-C、VPN 之類的。
-網站用 HTML、CSS、JavaScript 做，沒有後端。目前先放 6 篇文章。
+整理一些平常會碰到的科技問題，像wifi usb-c vpn之類的。
+網站用HTML、CSS、javsscript，沒有後端。目前放6篇文章。
 
 ## 怎麼開
 
@@ -28,5 +28,5 @@
 
 專案：https://github.com/M11507428/tech-notes-site
 
-網頁開 GitHub Pages 後可以用這個網址：
+網頁：
 https://m11507428.github.io/tech-notes-site/
