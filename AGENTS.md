@@ -13,7 +13,11 @@
 ## 修改與檢查
 
 只加文章就別動其他檔案。改功能要保留搜尋、分類、文章連結。完成後跑 `node tests/validate.js`，確認新文章找得到、能開啟、手機排版正常。若改了資料格式，也要更新這份文件。
-檔案放哪
+
+
+## 檔案放哪
+
+```text
 index.html          首頁、搜尋、分類
 article.html        文章共用頁面
 about.html          網站介紹
@@ -23,25 +27,35 @@ data/articles.js    全部文章資料
 tests/validate.js   檢查文章格式
 AGENTS.md           這份規則
 README.md           專案說明
-每篇文章不用另外做 HTML。文章網址統一用 article.html?slug=文章代號。
-網頁長怎樣
+```
+
+每篇文章不用另外做 HTML。文章網址統一用 `article.html?slug=文章代號`。
+
+## 網頁長怎樣
+
 - 背景偏白灰，深色文字，藍紫色當重點色。
 - 簡單的卡片排版，留一點空白，不要塞太滿。
 - 首頁有搜尋、分類和文章卡片。
 - 文章頁固定是標題、簡介、3 個重點、內文、相關文章。
-- 手機也要能正常看。樣式統一改 css/style.css，別亂加 inline CSS。
-新文章格式
-只改 data/articles.js 裡的 window.ARTICLES 陣列，照原本物件格式加一筆。
-- slug：英文小寫加 -，不能重複，之後不要亂改。
-- title、`description`：標題和簡介，中文，別太長。
-- category：只能用 網路、`設備`、`資安`。
-- icon：一個符號。
-- accent、`iconColor`：`#RRGGBB` 顏色。
-- readTime：閱讀分鐘數，正整數。
-- tags：至少一個搜尋關鍵字。
-- highlights：剛好 3 個重點。
-- sections：至少 3 段，每段都要有 heading 和 paragraphs。要條列可加 bullets，提醒可加 note。
+- 手機也要能正常看。樣式統一改 `css/style.css`，別亂加 inline CSS。
+
+## 新文章格式
+
+只改 `data/articles.js` 裡的 `window.ARTICLES` 陣列，照原本物件格式加一筆。
+
+- `slug`：英文小寫加 `-`，不能重複，之後不要亂改。
+- `title`、`description`：標題和簡介，中文，別太長。
+- `category`：只能用 `網路`、`設備`、`資安`。
+- `icon`：一個符號。
+- `accent`、`iconColor`：`#RRGGBB` 顏色。
+- `readTime`：閱讀分鐘數，正整數。
+- `tags`：至少一個搜尋關鍵字。
+- `highlights`：剛好 3 個重點。
+- `sections`：至少 3 段，每段都要有 `heading` 和 `paragraphs`。要條列可加 `bullets`，提醒可加 `note`。
+
 例如：
+
+```js
 {
   slug: "bluetooth-basics",
   title: "藍牙是什麼？",
@@ -59,3 +73,11 @@ README.md           專案說明
     { heading: "注意事項", paragraphs: ["這裡寫內文。"] }
   ]
 }
+```
+## 做完檢查
+
+- 跑 `node tests/validate.js`，確認資料格式沒問題。
+- 首頁找得到新文章，分類和搜尋能用。
+- 點卡片可以進文章頁，輸入錯的 slug 不會壞掉。
+- 手機排版正常，GitHub Pages 的連結正常。
+- 最後告訴我改了什麼、文章網址是什麼。
