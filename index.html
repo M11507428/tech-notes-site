@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="生活科技小百科：把常見的科技概念整理成簡單、好讀的知識卡。">
+  <meta name="theme-color" content="#F8F8F5">
+  <title>生活科技小百科｜五分鐘看懂日常科技</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="data/articles.js"></script>
+  <script defer src="js/site.js"></script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">跳至主要內容</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="生活科技小百科首頁"><span class="brand-mark">t<span class="brand-dot">.</span></span><span>生活科技小百科</span></a>
+      <nav class="site-nav" aria-label="主要導覽"><a class="nav-link active" aria-current="page" href="index.html">探索主題</a><a class="nav-link" href="about.html">關於專案</a><a class="nav-action" href="#topics">開始閱讀 <span aria-hidden="true">↗</span></a></nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="status-dot"></span> 一點一點，弄懂身邊的科技</span>
+        <h1 id="hero-title">科技沒有那麼難，<br><span class="hero-highlight">只是需要好好解釋。</span></h1>
+        <p class="hero-intro">Wi-Fi、USB-C、雲端、資安……那些每天都會遇到，卻不一定真的理解的東西。這裡用簡單的方式，一篇一篇講清楚。</p>
+        <a class="primary-button" href="#topics">看看有哪些主題 <span aria-hidden="true">↗</span></a>
+        <div class="hero-stats" aria-label="網站概覽"><div><strong id="article-count">6</strong><small>篇簡單介紹</small></div><span class="stat-divider" aria-hidden="true"></span><div><strong>3</strong><small>個內容類別</small></div><span class="stat-divider" aria-hidden="true"></span><div><strong>0</strong><small>個額外安裝需求</small></div></div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-grid"></div><div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="floating-card main-card"><div class="card-topline"><span class="tiny-circle"></span><span class="tiny-circle"></span><span class="tiny-circle"></span><span class="card-hint">TECH NOTES / 001</span></div><div class="main-card-icon">⌁</div><div class="main-card-title">Wi-Fi 2.4G<br>還是 5G？</div><div class="main-card-bottom"><span>3 MIN READ</span><span>↗</span></div></div>
+        <div class="floating-card mini-card mini-top"><span class="mini-card-icon">⌘</span><span><b>USB-C</b><small>不只看接頭</small></span></div>
+        <div class="floating-card mini-card mini-bottom"><span class="mini-card-icon shield">✳</span><span><b>雙重驗證</b><small>讓帳號更安全</small></span></div>
+        <div class="art-sparkle sparkle-one">✳</div><div class="art-sparkle sparkle-two">✦</div>
+      </div>
+    </section>
+
+    <section class="topics-section" id="topics" aria-labelledby="topics-title">
+      <div class="container">
+        <div class="section-heading"><div><span class="section-overline">THE LIBRARY / 內容索引</span><h2 id="topics-title">今天想弄懂什麼？</h2><p>挑一個有興趣的主題，從基本觀念開始。</p></div><div class="search-control"><label for="search-input" class="visually-hidden">搜尋文章</label><span aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="搜尋主題或關鍵字" autocomplete="off"></div></div>
+        <div class="filter-bar" role="group" aria-label="分類篩選"><button class="filter-chip selected" data-filter="全部" aria-pressed="true">全部主題</button><button class="filter-chip" data-filter="網路" aria-pressed="false">網路</button><button class="filter-chip" data-filter="設備" aria-pressed="false">設備</button><button class="filter-chip" data-filter="資安" aria-pressed="false">資安</button><span class="result-count" id="result-count" aria-live="polite">共 6 篇</span></div>
+        <div class="article-grid" id="article-grid" aria-live="polite"></div>
+        <div class="empty-state" id="empty-state" hidden><div class="empty-symbol">⌕</div><strong>暫時沒有找到內容</strong><p>換個關鍵字，或是看看其他分類。</p><button id="reset-search" class="text-button">清除搜尋條件 ↗</button></div>
+      </div>
+    </section>
+
+    <section class="how-section container"><div class="how-copy"><span class="section-overline">MADE TO GROW / 持續擴充</span><h2>不是只做一次，<br>而是可以一直加下去。</h2><p>每篇文章都使用同一種資料格式。未來想介紹新主題，只要照著 <code>AGENTS.md</code> 的規則新增資料，首頁和文章頁就會自動套用既有版型。</p><a class="underlined-link" href="about.html">看看這個專案怎麼設計 ↗</a></div><div class="how-visual" aria-hidden="true"><div class="flow-card"><span>01</span><b>寫好主題資料</b><small>data/articles.js</small></div><div class="flow-line">↓</div><div class="flow-card"><span>02</span><b>套用共同樣式</b><small>css/style.css</small></div><div class="flow-line">↓</div><div class="flow-card emph"><span>03</span><b>自動產生文章頁</b><small>article.html?slug=...</small></div></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a class="brand footer-brand" href="index.html"><span class="brand-mark">t<span class="brand-dot">.</span></span><span>生活科技小百科</span></a><p>簡單、實用、可以繼續長大的小網站。</p><span class="copyright">© 2026 Tech Notes</span></div></footer>
+</body>
+</html>
