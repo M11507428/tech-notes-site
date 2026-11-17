@@ -1,7 +1,7 @@
 # 生活科技小百科
 
 整理一些平常會碰到的科技問題，像wifi usb-c vpn之類的。
-網站用HTML、CSS、javsscript，沒有後端。目前放6篇文章。
+網站用html、CSS、JavaScript，沒有後端。目前放6篇文章。
 
 ## 怎麼開
 
